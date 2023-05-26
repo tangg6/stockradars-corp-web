@@ -1,5 +1,3 @@
-// App.jsx
-
 import logo from './logo.svg';
 import './App.css';
 import CorpCard from './components/CorpCard';
