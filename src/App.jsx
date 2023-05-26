@@ -7,7 +7,6 @@ import RegisterPage from './screens/RegisterPage';
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <Router>
           <NavigatorTab />
           <Routes>
@@ -15,7 +14,6 @@ export default function App() {
             <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </Router>
-      </header>
     </div>
   );
 }

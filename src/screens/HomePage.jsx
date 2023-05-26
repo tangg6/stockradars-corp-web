@@ -1,5 +1,6 @@
 import CorpCard from '../components/CorpCard';
 import React, { useState, useEffect } from 'react';
+import '../App.css';
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -13,7 +14,7 @@ const HomePage = () => {
   
   return (
     <>
-    <div className="container mx-auto mt-4">
+    <div className="container">
           <CorpCard data={data} />
         </div>
     </>
