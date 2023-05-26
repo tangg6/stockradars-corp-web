@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Card, Button } from "@mui/material";
 
-export default function CorpCard({ data }) {
+const CorpCard = ({ data }) => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleClick = (item) => {
@@ -48,3 +48,6 @@ export default function CorpCard({ data }) {
     </Box>
   );
 }
+
+
+export default CorpCard
