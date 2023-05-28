@@ -24,4 +24,4 @@ API : https://stockradars.co/assignment/data.php
  - พร้อมรับค่า parameter จาก URL ตามตัวอย่างด้านล่าง URL 
  ตัวอย่าง : www.example.com?ref=stockradars&email=example@siamsquared.com 
 
- The sending is in Navigator Tab (src/navigator/NavigatorTab.jsx) to go to /register?ref=stockradars&email=example@siamsquared.com
+ Answer : The sending is in Navigator Tab (src/navigator/NavigatorTab.jsx) to go to /register?ref=stockradars&email=example@siamsquared.com
