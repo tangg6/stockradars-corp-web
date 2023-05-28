@@ -12,7 +12,7 @@ const NavigatorTab = () => {
           </li>
           <li>
             {/* Part II is send a data through URL */}
-            <Link to="/register?ref=stockradars&email=example@siamsquared.com"> 
+            <Link to="/register?ref=stockradars&email=example@siamsquared.com">
               Register
             </Link>
           </li>

@@ -1,7 +1,6 @@
 import React from "react";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from "@mui/material/styles";
 import { TextField, Button } from "@mui/material";
-
 
 const RegisterForm = ({
   data,
@@ -12,9 +11,7 @@ const RegisterForm = ({
   setEmail,
   setRef,
 }) => {
-  
-    const theme = useTheme();
-
+  const theme = useTheme();
 
   return (
     <div className="container mx-auto">
@@ -55,11 +52,7 @@ const RegisterForm = ({
           margin="normal"
         />
         <div className="flex justify-end p-2">
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-          >
+          <Button type="submit" variant="contained" color="primary">
             สมัคร
           </Button>
         </div>

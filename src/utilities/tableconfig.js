@@ -10,4 +10,3 @@ export const tableColumns = (selectedLanguage) => [
 
   { field: "N_URL", headerName: "URL", width: 200 },
 ];
- 
