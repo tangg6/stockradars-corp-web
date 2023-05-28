@@ -14,6 +14,7 @@ const HomePage = () => {
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error(error));
+      
   }, []);
 
   const setTH = () => {
@@ -24,13 +25,16 @@ const HomePage = () => {
     setSelectedLanguage("en");
   };
 
-  const handleDisplayTypeChange = (event, newDisplayType) => {
-    setDisplayType(newDisplayType);
+  const displayPanel = () => {
+    setDisplayType("card");
+  };
+  const displayTable = () => {
+    setDisplayType("table");
   };
 
   return (
     <div className="container">
-      <div className="toggle-button-group flex justify-end p-2 mt-4">
+      <div className="toggle-button-group flex justify-end ">
         <ToggleButtonGroup color="primary">
           <ToggleButton onClick={setEN} sx={{ color: "white" }}>
             EN
@@ -41,15 +45,14 @@ const HomePage = () => {
         </ToggleButtonGroup>
       </div>
 
-      <div className="display-toggle-container">
-        <ToggleButtonGroup
-          value={displayType}
-          exclusive
-          onChange={handleDisplayTypeChange}
-          className="display-toggle-buttons"
-        >
-          <ToggleButton value="card">Card</ToggleButton>
-          <ToggleButton value="table">Table</ToggleButton>
+      <div className="toggle-button-group flex justify-end p-2 ">
+        <ToggleButtonGroup>
+          <ToggleButton onClick={displayPanel} sx={{ color: "white" }}>
+            Card
+          </ToggleButton>
+          <ToggleButton onClick={displayTable} sx={{ color: "white" }}>
+            Table
+          </ToggleButton>
         </ToggleButtonGroup>
       </div>
 

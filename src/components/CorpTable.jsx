@@ -1,43 +1,25 @@
 import React from "react";
+import { DataGrid } from "@mui/x-data-grid";
+import { tableColumns } from "../utilities/tableconfig";
+import "../styles/CorpTable.css"; 
 
 const CorpTable = ({ data, selectedLanguage }) => {
+  const columns = tableColumns(selectedLanguage);
+
+  const getRowId = (row) => row.N_name;
+
   return (
-    <table className="corp-table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Company</th>
-          <th>Full Name</th>
-          <th>Short Name</th>
-          <th>Market Cap</th>
-          <th>Type</th>
-          <th>Business Type</th>
-          <th>URL</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.N_name}</td>
-            <td>
-              {selectedLanguage === "th" ? item.N_COMPANY_T : item.N_COMPANY_E}
-            </td>
-            <td>{item.N_fullname}</td>
-            <td>{item.N_shortname}</td>
-            <td>{item.marketcap}</td>
-            <td>{item.F_TYPE}</td>
-            <td>
-              {selectedLanguage === "th"
-                ? item.N_BUSINESS_TYPE_T
-                : item.N_BUSINESS_TYPE_E}
-            </td>
-            <td>
-              <a href={item.N_URL}>{item.N_URL}</a>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="corp-table-container">
+      <DataGrid
+        rows={data}
+        columns={columns}
+        pageSize={10} // The DataGrid (MIT license) is limited to pages of up to 100 rows. If you want larger pages, you will need to upgrade to Pro plan or above.
+        getRowId={getRowId}
+        autoHeight
+        disableColumnResize={false}
+        disableColumnFilter={false}
+      />
+    </div>
   );
 };
 

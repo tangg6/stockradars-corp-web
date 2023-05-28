@@ -22,20 +22,20 @@ const CorpCard = ({ data, selectedLanguage }) => {
               variant="outlined"
               className={`p-4 max-w-sm mx-auto ${selectedItem === item ? "expanded" : ""}`}
             >
-              <h2 className="text-xl font-bold mb-2">{item.N_name}</h2>
+              <h2 className="text-2xl font-bold mb-2">{item.N_name}</h2>
               {/* Shown Detail */}
               <div>
-                <p className="text-sm mb-1">
+                <p className="text-md mb-1">
                   {selectedLanguage === "th"
                     ? item.N_COMPANY_T
                     : item.N_COMPANY_E}
                 </p>
-                <p className="text-sm mb-1 text-gray-600">Market Cap. {item.marketcap}</p>
+                <p className="text-md mb-1">Market Cap. {item.marketcap}</p>
               </div>
               {/* Hidden Detail */}
               {selectedItem === item && (
                 <div>
-                  <p className="text-sm mb-1">
+                  <p className="text-sm mb-1  text-gray-600">
                     {selectedLanguage === "th"
                       ? item.N_BUSINESS_TYPE_T
                       : item.N_BUSINESS_TYPE_E}
