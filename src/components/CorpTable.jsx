@@ -9,7 +9,7 @@ const CorpTable = ({ data, selectedLanguage }) => {
   const getRowId = (row) => row.N_name;
 
   return (
-    <div className="corp-table-container">
+    <div className="corp-table-container grid grid-cols-1 gap-16">
       <DataGrid
         rows={data}
         columns={columns}

@@ -35,11 +35,11 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="toggle-button-group flex justify-end ">
-        <ToggleButtonGroup color="primary">
-          <ToggleButton onClick={setEN} sx={{ color: "white" }}>
+        <ToggleButtonGroup >
+          <ToggleButton value={''} onClick={setEN} sx={{ color: "white" }}>
             EN
           </ToggleButton>
-          <ToggleButton onClick={setTH} sx={{ color: "white" }}>
+          <ToggleButton value={''} onClick={setTH} sx={{ color: "white" }}>
             TH
           </ToggleButton>
         </ToggleButtonGroup>
@@ -47,10 +47,10 @@ const HomePage = () => {
 
       <div className="toggle-button-group flex justify-end p-2 ">
         <ToggleButtonGroup>
-          <ToggleButton onClick={displayPanel} sx={{ color: "white" }}>
+          <ToggleButton value={''} onClick={displayPanel} sx={{ color: "white" }}>
             Card
           </ToggleButton>
-          <ToggleButton onClick={displayTable} sx={{ color: "white" }}>
+          <ToggleButton  value={''} onClick={displayTable} sx={{ color: "white" }}>
             Table
           </ToggleButton>
         </ToggleButtonGroup>
