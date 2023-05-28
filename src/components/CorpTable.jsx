@@ -1,7 +1,7 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { tableColumns } from "../utilities/tableconfig";
-import "../styles/CorpTable.css"; 
+import "../styles/CorpTable.css";
 
 const CorpTable = ({ data, selectedLanguage }) => {
   const columns = tableColumns(selectedLanguage);

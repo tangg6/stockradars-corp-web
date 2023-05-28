@@ -1,10 +1,9 @@
 .card.expanded {
-    height: auto;
-    transition: height 0.3s ease;
-  }
-  
-  .card {
-    min-height: 100px; 
-    transition: height 0.3s ease;
-  }
-  
+  height: auto;
+  transition: height 0.3s ease;
+}
+
+.card {
+  min-height: 100px;
+  transition: height 0.3s ease;
+}

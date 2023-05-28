@@ -1,7 +1,15 @@
-import React from 'react';
-import { TextField, Button } from '@mui/material';
+import React from "react";
+import { TextField, Button } from "@mui/material";
 
-const RegisterForm = ({ data, handleFormSubmit, setFirstName, setLastName, setPhoneNumber, setEmail, setRef }) => {
+const RegisterForm = ({
+  data,
+  handleFormSubmit,
+  setFirstName,
+  setLastName,
+  setPhoneNumber,
+  setEmail,
+  setRef,
+}) => {
   return (
     <div className="container mx-auto">
       <form onSubmit={handleFormSubmit} className="register-form">
@@ -40,9 +48,15 @@ const RegisterForm = ({ data, handleFormSubmit, setFirstName, setLastName, setPh
           fullWidth
           margin="normal"
         />
-        <Button type="submit" variant="contained" color="primary" className="flex justify-end">
-          สมัคร
-        </Button>
+        <div className="flex justify-end p-2">
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+          >
+            สมัคร
+          </Button>
+        </div>
       </form>
     </div>
   );

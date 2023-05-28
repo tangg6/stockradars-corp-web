@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 const NavigatorTab = () => {
   return (
@@ -11,7 +11,10 @@ const NavigatorTab = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/register?ref=stockradars&email=example@siamsquared.com">Register</Link>
+            {/* Part II is send a data through URL */}
+            <Link to="/register?ref=stockradars&email=example@siamsquared.com"> 
+              Register
+            </Link>
           </li>
         </ul>
       </div>
