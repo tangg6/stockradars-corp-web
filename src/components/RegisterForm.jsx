@@ -1,5 +1,4 @@
 import React from "react";
-import { useTheme } from "@mui/material/styles";
 import { TextField, Button } from "@mui/material";
 
 const RegisterForm = ({
@@ -11,7 +10,6 @@ const RegisterForm = ({
   setEmail,
   setRef,
 }) => {
-  const theme = useTheme();
 
   return (
     <div className="container mx-auto">
