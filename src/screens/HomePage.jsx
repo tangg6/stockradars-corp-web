@@ -14,6 +14,7 @@ const HomePage = () => {
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error(error));
+      
   }, []);
 
   const setTH = () => {
@@ -34,11 +35,11 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="toggle-button-group flex justify-end ">
-        <ToggleButtonGroup>
-          <ToggleButton value={""} onClick={setEN} sx={{ color: "white" }}>
+        <ToggleButtonGroup >
+          <ToggleButton value={''} onClick={setEN} sx={{ color: "white" }}>
             EN
           </ToggleButton>
-          <ToggleButton value={""} onClick={setTH} sx={{ color: "white" }}>
+          <ToggleButton value={''} onClick={setTH} sx={{ color: "white" }}>
             TH
           </ToggleButton>
         </ToggleButtonGroup>
@@ -46,18 +47,10 @@ const HomePage = () => {
 
       <div className="toggle-button-group flex justify-end p-2 ">
         <ToggleButtonGroup>
-          <ToggleButton
-            value={""}
-            onClick={displayPanel}
-            sx={{ color: "white" }}
-          >
+          <ToggleButton value={''} onClick={displayPanel} sx={{ color: "white" }}>
             Card
           </ToggleButton>
-          <ToggleButton
-            value={""}
-            onClick={displayTable}
-            sx={{ color: "white" }}
-          >
+          <ToggleButton  value={''} onClick={displayTable} sx={{ color: "white" }}>
             Table
           </ToggleButton>
         </ToggleButtonGroup>

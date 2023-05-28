@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Box, Card } from "@mui/material";
+import theme from "../styles/theme.js"; 
+
 import "../styles/CorpCard.css"; 
 
 const CorpCard = ({ data, selectedLanguage }) => {
+
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleClick = (item) => {
@@ -20,6 +23,7 @@ const CorpCard = ({ data, selectedLanguage }) => {
           <div key={index}>
             <Card
               variant="outlined"
+              
               className={`p-4 max-w-sm mx-auto ${selectedItem === item ? "expanded" : ""}`}
             >
               <h2 className="text-2xl font-bold mb-2">{item.N_name}</h2>
@@ -35,7 +39,7 @@ const CorpCard = ({ data, selectedLanguage }) => {
               {/* Hidden Detail */}
               {selectedItem === item && (
                 <div>
-                  <p className="text-sm mb-1  text-gray-600">
+                  <p className="text-sm mb-1  text-gray-400">
                     {selectedLanguage === "th"
                       ? item.N_BUSINESS_TYPE_T
                       : item.N_BUSINESS_TYPE_E}
@@ -45,8 +49,8 @@ const CorpCard = ({ data, selectedLanguage }) => {
                   </a>
                 </div>
               )}
-              <button onClick={() => handleClick(item)} className="w-full text-center">
-                <p style={{ fontSize: "10px" }} className="text-gray-500">
+              <button onClick={() => handleClick(item)} className="w-full text-center ">
+                <p style={{ fontSize: "10px", color:theme.palette.primary.main}} >
                   {selectedItem === item ? "..." : `${selectedLanguage === "th" ? "เพิ่มเติม..." : "More..."}` }
                 </p>
               </button>
