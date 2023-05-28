@@ -4,7 +4,7 @@ import '../App.css';
 
 const NavigatorTab = () => {
   return (
-    <nav className="navbar bg-black text-white fixed top-0 left-0 w-full p-4 ">
+    <nav className="navbar bg-black text-white fixed top-0 left-0 w-full p-4 z-10">
       <div className="flex justify-end">
         <ul className="flex space-x-4">
           <li>

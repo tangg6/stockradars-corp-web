@@ -1,0 +1,10 @@
+.card.expanded {
+    height: auto;
+    transition: height 0.3s ease;
+  }
+  
+  .card {
+    height: 100px; /* Set the initial height for hidden state */
+    transition: height 0.3s ease;
+  }
+  
